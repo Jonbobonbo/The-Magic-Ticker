@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>The Magic Ticker JavaScript Web App</title>
+    <script src="magicticker.js" async></script>
+</head>
+
+<body>
+    <header>
+        <h1>The Magic Ticker</h1>
+    </header>
+
+<main>
+
+    <button id="nextRound" onclick="advanceRound()">Begin Combat</button> <!-- button that enters combat and advances round by one -->
+    <button id="combatOver" onclick=outOfCombat()>Finished Combat</button> <!-- button that ends combat and resets round to zero -->
+    <button id="longRest" onclick=restFunction()>Long Rest</button> <!-- button that simulates a long rest by refreshing remaining uses to initial value and toggles all of the active switches off -->
+
+
+<div id="newSpell">
+    
+    <h1>Tracked Spells and Abilities</h1>
+
+</div>
+
+<div>
+    <h1>-----------------------------------------</h1>
+    <label for="title">Spell or ability you want to track:</label>
+    <input id="title" name="title" type="text"><br>
+    <label for="defaultDuration">How many rounds the effect will last:</label>
+    <input id="defaultDuration" name="defaultDuration" type="number"><br>
+    <label for="defaultDaily">Uses per day:</label>
+    <input id="defaultDaily" name="defaultDaily" type="number"><br>
+    <button id="track" onclick="addNew()">Track this ability!</button>
+    <button id="remove" onclick="removeLast()">Remove last</button>
+</div>
+
+</main>
+
+</body>
+</html>
